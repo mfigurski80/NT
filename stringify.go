@@ -39,6 +39,10 @@ func stringifyBlock(block notionapi.Block) string {
 		return stringifyChildPageBlock(block.(*notionapi.ChildPageBlock))
 	case "callout":
 		return stringifyCalloutBlock(block.(*notionapi.CalloutBlock))
+	case "to_do":
+		return stringifyTodoBlock(block.(*notionapi.ToDoBlock))
+	case "bookmark":
+		return stringifyBookmarkBlock(block.(*notionapi.BookmarkBlock))
 	default:
 		return fmt.Sprintf("//![%s]\n", block.GetType().String())
 	}
@@ -115,4 +119,16 @@ func stringifyChildPageBlock(block *notionapi.ChildPageBlock) string {
 
 func stringifyCalloutBlock(block *notionapi.CalloutBlock) string {
 	return fmt.Sprintf("\n[[ %s %s ]]\n\n", string(*block.Callout.Icon.Emoji), decipherRichText(block.Callout.Text))
+}
+
+func stringifyTodoBlock(block *notionapi.ToDoBlock) string {
+	check := " "
+	if block.ToDo.Checked {
+		check = "x"
+	}
+	return fmt.Sprintf("[%s] %s\n", check, decipherRichText(block.ToDo.Text))
+}
+
+func stringifyBookmarkBlock(block *notionapi.BookmarkBlock) string {
+	return fmt.Sprintf("[ %s Bookmark ](%s)\n", decipherRichText(block.Bookmark.Caption), block.Bookmark.URL)
 }

@@ -1,6 +1,6 @@
 Connecting to notion api...
 
-//![bookmark]
+[  (https://pollev.com/nambio) Bookmark ]
 //![child_database]
 
 -----------
@@ -10,7 +10,7 @@ Connecting to notion api...
 	
 	# Scientific Method #
 	
-	//![to_do]
+	[x] Pretest on sex for 2021-09-01 → 
 	Observation🔭 → Question❓ → Hypothesis❗ → Experiment🧪 → Results📰 → Conclusion😍 → <restart or done>
 	
 	Any experiment needs:
@@ -67,8 +67,8 @@ Connecting to notion api...
 	Depends on sex hormone concentration, not needed for reproduction.
 	Sexual Dimorphism — differences in size or appearance between sexes
 	
-	//![to_do]
-	//![to_do]
+	[x] Lab Pre-Assignment 2021-09-13 →  
+	[x] Scientific Method Quiz 2021-09-08 →  
 	2021-09-08 →  
 	Argument for defining sex as binary (Wright), or Quinn (spectrum)
 	
