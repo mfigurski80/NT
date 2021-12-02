@@ -12,12 +12,15 @@ import (
 func main() {
 	godotenv.Load()
 
-	fmt.Println("Connecting to notion api...")
+	fmt.Printf("Connecting to notion api...\n\n")
 
 	INTEGRATION_KEY := notionapi.Token(os.Getenv("NOTION_INTEGRATION_TOKEN"))
 	client := notionapi.NewClient(INTEGRATION_KEY)
 	// searchForQuery(client, "bio")
 	getPage(client, "aaf43ebf6bf6404eaf978588b6c3f0ca")
+}
+
+func getBlock(client *notionapi.Client, id string) {
 }
 
 func getPage(client *notionapi.Client, id string) {
@@ -30,11 +33,15 @@ func getPage(client *notionapi.Client, id string) {
 		// fmt.Printf("Block #%-2d: %s\n", i, block.GetType())
 		switch block.GetType() {
 		case "paragraph":
-			fmt.Printf("%s", decipherParagraphBlock(
+
+			fmt.Print(decipherParagraphBlock(
 				block.(*notionapi.ParagraphBlock),
+				client,
 			))
 		case "divider":
-			fmt.Printf("***\n")
+			fmt.Print(decipherDivider(
+				block.(*notionapi.DividerBlock),
+			))
 		default:
 			fmt.Printf("#![%d] %s\n\n", i, block.GetType())
 		}
