@@ -1,7 +1,5 @@
-Connecting to notion api...
-
 🧬 Nam Bio
-=====
+==========
 
 [ Bookmark ](https://pollev.com/nambio)
 //![child_database]

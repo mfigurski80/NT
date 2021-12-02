@@ -12,8 +12,6 @@ import (
 func main() {
 	godotenv.Load()
 
-	fmt.Printf("Connecting to notion api...\n\n")
-
 	INTEGRATION_KEY := notionapi.Token(os.Getenv("NOTION_INTEGRATION_TOKEN"))
 	client := notionapi.NewClient(INTEGRATION_KEY)
 	// searchForQuery(client, "bio")

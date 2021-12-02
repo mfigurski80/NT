@@ -16,10 +16,11 @@ func decipherRichText(text []notionapi.RichText) string {
 }
 
 func stringifyPageMeta(page *notionapi.Page) string {
-	txt := fmt.Sprintf("%s %s\n=====\n\n",
+	txt := fmt.Sprintf("%s %s",
 		*page.Icon.Emoji,
 		decipherRichText(page.Properties["title"].(*notionapi.TitleProperty).Title),
 	)
+	txt += "\n" + strings.Repeat("=", len(txt)-2) + "\n\n"
 
 	return txt
 }
