@@ -27,12 +27,16 @@ func getPage(client *notionapi.Client, id string) {
 	}
 	// fmt.Printf("Result: %-v\n", res.Results)
 	for i, block := range res.Results {
-		fmt.Printf("Block #%-2d: %s\n", i, block.GetType())
+		// fmt.Printf("Block #%-2d: %s\n", i, block.GetType())
 		switch block.GetType() {
 		case "paragraph":
-			fmt.Printf("\t%s", decipherParagraphBlock(
+			fmt.Printf("%s", decipherParagraphBlock(
 				block.(*notionapi.ParagraphBlock),
 			))
+		case "divider":
+			fmt.Printf("***\n")
+		default:
+			fmt.Printf("#![%d] %s\n\n", i, block.GetType())
 		}
 	}
 }

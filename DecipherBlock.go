@@ -13,5 +13,5 @@ func decipherRichText(text []notionapi.RichText) string {
 }
 
 func decipherParagraphBlock(block *notionapi.ParagraphBlock) string {
-	return decipherRichText(block.Paragraph.Text) + "\n"
+	return decipherRichText(block.Paragraph.Text) + "\n\n"
 }
