@@ -17,7 +17,7 @@ func main() {
 	INTEGRATION_KEY := notionapi.Token(os.Getenv("NOTION_INTEGRATION_TOKEN"))
 	client := notionapi.NewClient(INTEGRATION_KEY)
 	// searchForQuery(client, "bio")
-	getPage(client, "5d2e668096784c78bec872d537b90d9d")
+	getPage(client, "aaf43ebf6bf6404eaf978588b6c3f0ca")
 }
 
 func getPage(client *notionapi.Client, id string) {

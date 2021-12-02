@@ -26,7 +26,7 @@ func fillBlockChildren(ctx context.Context, client *notionapi.Client, id string)
 			t := block.(*notionapi.ToggleBlock)
 			if t.HasChildren {
 				// fmt.Printf("\t[%-v] toggle has children\n", decipherRichText(t.Toggle.Text))
-				t.Children = fillBlockChildren(ctx, client, t.ID.String())
+				t.Toggle.Children = fillBlockChildren(ctx, client, t.ID.String())
 			}
 		case "synced_block":
 			b := block.(*notionapi.SyncedBlock)

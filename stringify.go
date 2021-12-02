@@ -26,6 +26,10 @@ func stringifyBlock(block notionapi.Block) string {
 		return stringifyHeading3Block(block.(*notionapi.Heading3Block))
 	case "divider":
 		return stringifyDividerBlock(block.(*notionapi.DividerBlock))
+	case "toggle":
+		return stringifyToggleBlock(block.(*notionapi.ToggleBlock))
+	case "synced_block":
+		return stringifySyncedBlock(block.(*notionapi.SyncedBlock))
 	default:
 		return fmt.Sprintf("//![%s]\n", block.GetType().String())
 	}
@@ -54,4 +58,21 @@ func stringifyHeading3Block(block *notionapi.Heading3Block) string {
 
 func stringifyDividerBlock(block *notionapi.DividerBlock) string {
 	return "***\n\n"
+}
+
+func stringifyToggleBlock(block *notionapi.ToggleBlock) string {
+	p := "[ " + decipherRichText(block.Toggle.Text) + " Toggle ]\n\n"
+	// p += fmt.Sprintf("\tchildren: %-v\n", block.Toggle.Children)
+	for _, ch := range block.Toggle.Children {
+		p += stringifyBlock(ch)
+	}
+	return p
+}
+
+func stringifySyncedBlock(block *notionapi.SyncedBlock) string {
+	p := ""
+	for _, ch := range block.SyncedBlock.Children {
+		p += stringifyBlock(ch)
+	}
+	return p
 }
