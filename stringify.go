@@ -37,6 +37,8 @@ func stringifyBlock(block notionapi.Block) string {
 		return stringifyNumberedListItemBlock(block.(*notionapi.NumberedListItemBlock))
 	case "child_page":
 		return stringifyChildPageBlock(block.(*notionapi.ChildPageBlock))
+	case "callout":
+		return stringifyCalloutBlock(block.(*notionapi.CalloutBlock))
 	default:
 		return fmt.Sprintf("//![%s]\n", block.GetType().String())
 	}
@@ -102,4 +104,8 @@ func stringifyNumberedListItemBlock(block *notionapi.NumberedListItemBlock) stri
 
 func stringifyChildPageBlock(block *notionapi.ChildPageBlock) string {
 	return fmt.Sprintf("Page: (%s)[%s]\n", block.ChildPage.Title, block.ID.String())
+}
+
+func stringifyCalloutBlock(block *notionapi.CalloutBlock) string {
+	return fmt.Sprintf("\n[[ %s %s ]]\n\n", string(*block.Callout.Icon.Emoji), decipherRichText(block.Callout.Text))
 }
