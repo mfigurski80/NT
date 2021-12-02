@@ -33,7 +33,18 @@ func fillBlockChildren(ctx context.Context, client *notionapi.Client, id string)
 			if b.HasChildren {
 				b.SyncedBlock.Children = fillBlockChildren(ctx, client, b.ID.String())
 			}
+		case "bulleted_list_item":
+			b := block.(*notionapi.BulletedListItemBlock)
+			if b.HasChildren {
+				b.BulletedListItem.Children = fillBlockChildren(ctx, client, b.ID.String())
+			}
+		case "numbered_list_item":
+			b := block.(*notionapi.NumberedListItemBlock)
+			if b.HasChildren {
+				b.NumberedListItem.Children = fillBlockChildren(ctx, client, b.ID.String())
+			}
 		}
+
 	}
 	return blocks
 }

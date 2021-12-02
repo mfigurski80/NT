@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/jomei/notionapi"
 )
@@ -30,6 +31,12 @@ func stringifyBlock(block notionapi.Block) string {
 		return stringifyToggleBlock(block.(*notionapi.ToggleBlock))
 	case "synced_block":
 		return stringifySyncedBlock(block.(*notionapi.SyncedBlock))
+	case "bulleted_list_item":
+		return stringifyBulletedListItemBlock(block.(*notionapi.BulletedListItemBlock))
+	case "numbered_list_item":
+		return stringifyNumberedListItemBlock(block.(*notionapi.NumberedListItemBlock))
+	case "child_page":
+		return stringifyChildPageBlock(block.(*notionapi.ChildPageBlock))
 	default:
 		return fmt.Sprintf("//![%s]\n", block.GetType().String())
 	}
@@ -39,32 +46,32 @@ func stringifyParagraphBlock(block *notionapi.ParagraphBlock) string {
 	p := decipherRichText(block.Paragraph.Text) + "\n"
 	// fmt.Printf("\t%-v\n", block.ID)
 	for _, ch := range block.Paragraph.Children {
-		p += stringifyBlock(ch)
+		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
 	}
-	return p + "\n"
+	return p
 }
 
 func stringifyHeading1Block(block *notionapi.Heading1Block) string {
-	return "\n# " + decipherRichText(block.Heading1.Text) + "\n\n"
+	return "\n# " + decipherRichText(block.Heading1.Text) + " #\n\n"
 }
 
 func stringifyHeading2Block(block *notionapi.Heading2Block) string {
-	return "\n## " + decipherRichText(block.Heading2.Text) + "\n\n"
+	return "\n## " + decipherRichText(block.Heading2.Text) + " ##\n\n"
 }
 
 func stringifyHeading3Block(block *notionapi.Heading3Block) string {
-	return "\n### " + decipherRichText(block.Heading3.Text) + "\n\n"
+	return "\n### " + decipherRichText(block.Heading3.Text) + " ###\n\n"
 }
 
 func stringifyDividerBlock(block *notionapi.DividerBlock) string {
-	return "-----------\n"
+	return "\n-----------\n\n"
 }
 
 func stringifyToggleBlock(block *notionapi.ToggleBlock) string {
 	p := "[ " + decipherRichText(block.Toggle.Text) + " Toggle ]\n"
 	// p += fmt.Sprintf("\tchildren: %-v\n", block.Toggle.Children)
 	for _, ch := range block.Toggle.Children {
-		p += stringifyBlock(ch)
+		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
 	}
 	return p
 }
@@ -75,4 +82,24 @@ func stringifySyncedBlock(block *notionapi.SyncedBlock) string {
 		p += stringifyBlock(ch)
 	}
 	return p
+}
+
+func stringifyBulletedListItemBlock(block *notionapi.BulletedListItemBlock) string {
+	p := "- " + decipherRichText(block.BulletedListItem.Text) + "\n"
+	for _, ch := range block.BulletedListItem.Children {
+		p += stringifyBlock(ch)
+	}
+	return p
+}
+
+func stringifyNumberedListItemBlock(block *notionapi.NumberedListItemBlock) string {
+	p := "- " + decipherRichText(block.NumberedListItem.Text) + "\n"
+	for _, ch := range block.NumberedListItem.Children {
+		p += stringifyBlock(ch)
+	}
+	return p
+}
+
+func stringifyChildPageBlock(block *notionapi.ChildPageBlock) string {
+	return fmt.Sprintf("Page: (%s)[%s]\n", block.ChildPage.Title, block.ID.String())
 }
