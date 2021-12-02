@@ -1,35 +1,11 @@
 Connecting to notion api...
-#![0] bookmark
 
-#![1] child_database
+Hello from Notion!
 
-***
-#![3] toggle
-
-***
-#![5] toggle
-
-***
-#![7] toggle
-
-***
-#![9] toggle
-
-***
-#![11] toggle
-
-***
-#![13] toggle
-
-***
-#![15] toggle
-
-***
-#![17] toggle
+NT is a command-line application to read/parse exposed notion pages into markdown output
+This part should show up in the markdown!
 
 
+### Github
 
-Welcome to the jungle
-
-#![20] child_page
-
+//![link_preview]

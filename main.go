@@ -22,7 +22,7 @@ func main() {
 
 func getPage(client *notionapi.Client, id string) {
 	blocks := fillBlockChildren(context.Background(), client, id)
-	fmt.Printf("FINAL RESULT:\n%-v\n", blocks)
+	// fmt.Printf("FINAL RESULT:\n%-v\n", blocks)
 	// fmt.Printf("Text: %-v\n", blocks[2].(*notionapi.ParagraphBlock).Paragraph.Children)
 
 	for _, b := range blocks {
