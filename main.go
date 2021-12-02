@@ -24,28 +24,26 @@ func getBlock(client *notionapi.Client, id string) {
 }
 
 func getPage(client *notionapi.Client, id string) {
-	res, err := client.Block.GetChildren(context.Background(), notionapi.BlockID(id), nil)
-	if err != nil {
-		panic(err)
-	}
+	fillBlockChildren(context.Background(), client, id)
+	return
 	// fmt.Printf("Result: %-v\n", res.Results)
-	for i, block := range res.Results {
-		// fmt.Printf("Block #%-2d: %s\n", i, block.GetType())
-		switch block.GetType() {
-		case "paragraph":
-
-			fmt.Print(decipherParagraphBlock(
-				block.(*notionapi.ParagraphBlock),
-				client,
-			))
-		case "divider":
-			fmt.Print(decipherDivider(
-				block.(*notionapi.DividerBlock),
-			))
-		default:
-			fmt.Printf("#![%d] %s\n\n", i, block.GetType())
-		}
-	}
+	// for i, block := range res.Results {
+	// // fmt.Printf("Block #%-2d: %s\n", i, block.GetType())
+	// switch block.GetType() {
+	// case "paragraph":
+	//
+	// fmt.Print(decipherParagraphBlock(
+	// block.(*notionapi.ParagraphBlock),
+	// client,
+	// ))
+	// case "divider":
+	// fmt.Print(decipherDivider(
+	// block.(*notionapi.DividerBlock),
+	// ))
+	// default:
+	// fmt.Printf("#![%d] %s\n\n", i, block.GetType())
+	// }
+	// }
 }
 
 func getPageMeta(client *notionapi.Client, id string) {
