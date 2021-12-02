@@ -17,14 +17,18 @@ func main() {
 	INTEGRATION_KEY := notionapi.Token(os.Getenv("NOTION_INTEGRATION_TOKEN"))
 	client := notionapi.NewClient(INTEGRATION_KEY)
 	// searchForQuery(client, "bio")
-	getPage(client, "aaf43ebf6bf6404eaf978588b6c3f0ca")
-}
-
-func getBlock(client *notionapi.Client, id string) {
+	getPage(client, "5d2e668096784c78bec872d537b90d9d")
 }
 
 func getPage(client *notionapi.Client, id string) {
-	fillBlockChildren(context.Background(), client, id)
+	blocks := fillBlockChildren(context.Background(), client, id)
+	fmt.Printf("FINAL RESULT:\n%-v\n", blocks)
+	// fmt.Printf("Text: %-v\n", blocks[2].(*notionapi.ParagraphBlock).Paragraph.Children)
+
+	for _, b := range blocks {
+		fmt.Printf(stringifyBlock(b))
+	}
+
 	return
 	// fmt.Printf("Result: %-v\n", res.Results)
 	// for i, block := range res.Results {
