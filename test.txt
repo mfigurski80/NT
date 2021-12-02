@@ -1,6 +1,9 @@
 Connecting to notion api...
 
-[  (https://pollev.com/nambio) Bookmark ]
+🧬 Nam Bio
+=====
+
+[ Bookmark ](https://pollev.com/nambio)
 //![child_database]
 
 -----------
@@ -35,7 +38,7 @@ Connecting to notion api...
 	
 	Consensus: collective agreement of majority of scientists in a particular field of study
 	Furthermore, scientists are very poorly connected with the public, who mostly get their understanding from the media or policymakers (think pop sci, etc). Like here: https://imgs.xkcd.com/comics/significant.png
-	( Scientific Method Page )[ 8b73a485-1f01-41cb-ba94-c571c091fe29 ]
+	[ Scientific Method Page ](8b73a485-1f01-41cb-ba94-c571c091fe29)
 
 -----------
 
@@ -105,7 +108,7 @@ Connecting to notion api...
 	Pain perception is different. NMDA receptor is needed for morphine, and receptors are different between m/f
 	Sex as a Biological Variable (SABV) in 2014. No standards yet, most studies let participants self-report
 	No gender variable guidelines either btw. Might potentially be important, should report
-	( Biological Sex and Gender Page )[ c51cb0b0-c295-42ec-9c7c-3c8d634caccc ]
+	[ Biological Sex and Gender Page ](c51cb0b0-c295-42ec-9c7c-3c8d634caccc)
 
 -----------
 
@@ -165,7 +168,7 @@ Connecting to notion api...
 	Impacts small populations more
 	Founder Effect — non-representative subset of individuals separates and migrates to different place
 		Gives evidence for African Origin, since Africa has highest genetic variation and hosts an allele superset
-	( Evolution Page )[ 50a82265-35f5-4681-9baf-e2def77695f1 ]
+	[ Evolution Page ](50a82265-35f5-4681-9baf-e2def77695f1)
 
 -----------
 
@@ -181,7 +184,7 @@ Connecting to notion api...
 		Sequencing maternal mitochondria DNA supports African lineage (so does sequencing Y chromosome btw)
 	Chloroplast — produces ATP with sunlight. Probably bacteria too
 	Endosymbiosis — separate organism living inside another. Termites have parabasilid bacteria that break down wood
-	( Cells Page )[ e109a50c-686c-41f9-ba36-33347f386471 ]
+	[ Cells Page ](e109a50c-686c-41f9-ba36-33347f386471)
 
 -----------
 
@@ -220,7 +223,7 @@ Connecting to notion api...
 		Have rigorous order describing placement on the spine — switching them around results in having body parts misplaced on the body
 		Alternatively, this lets evolution make 'quick' dramatic changes such as adding more legs. Since these genes usually get duplicated, that clone undergoes genetic drift and eventually comes out as a new body plan
 	
-	( Evidence for Evolution Page )[ 57a2453b-ad03-467f-8e26-d9e1b8046872 ]
+	[ Evidence for Evolution Page ](57a2453b-ad03-467f-8e26-d9e1b8046872)
 
 -----------
 
@@ -259,7 +262,7 @@ Connecting to notion api...
 	Commensalism — one benefits and other is neutral
 	Amensalism — one is neutral but other is hurt
 	Interspecies Competition — since resources are limited, both parties are hurt
-	( Social Evolution Page )[ 129f6fae-777d-4b54-a417-37e6c6b69e55 ]
+	[ Social Evolution Page ](129f6fae-777d-4b54-a417-37e6c6b69e55)
 
 -----------
 
@@ -318,12 +321,12 @@ Connecting to notion api...
 	2021-11-29 →  
 	Zoonotic Reservoirs — animals that hold and support virus populations but don't get sick
 	
-	( Immunity Page )[ c42416bf-bf1a-427a-917e-849ed8cc782a ]
+	[ Immunity Page ](c42416bf-bf1a-427a-917e-849ed8cc782a)
 
 -----------
 
 [ More Genetics Toggle ]
 	
 
-( Group Lab Presentation Page )[ 707eb7d3-ec2f-42ce-8a2c-dda78d6f38de ]
+[ Group Lab Presentation Page ](707eb7d3-ec2f-42ce-8a2c-dda78d6f38de)
 

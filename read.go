@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/jomei/notionapi"
 )
@@ -47,4 +48,27 @@ func fillBlockChildren(ctx context.Context, client *notionapi.Client, id string)
 
 	}
 	return blocks
+}
+
+func getPageMeta(ctx context.Context, client *notionapi.Client, id string) *notionapi.Page {
+	res, err := client.Page.Get(ctx, notionapi.PageID(id))
+	if err != nil {
+		panic(err)
+	}
+	// fmt.Printf("Result: %-v\n", res)
+	return res
+}
+
+func readPage(client *notionapi.Client, id string) {
+	ctx := context.Background()
+	met := getPageMeta(ctx, client, id)
+	fmt.Printf(stringifyPageMeta(met))
+	// fmt.Printf("# %s %s\n",
+	// *met.Icon.Emoji,
+	// decipherRichText(met.Properties["title"].(*notionapi.TitleProperty).Title),
+	// )
+	blocks := fillBlockChildren(context.Background(), client, id)
+	for _, b := range blocks {
+		fmt.Printf(stringifyBlock(b))
+	}
 }

@@ -15,6 +15,15 @@ func decipherRichText(text []notionapi.RichText) string {
 	return buf
 }
 
+func stringifyPageMeta(page *notionapi.Page) string {
+	txt := fmt.Sprintf("%s %s\n=====\n\n",
+		*page.Icon.Emoji,
+		decipherRichText(page.Properties["title"].(*notionapi.TitleProperty).Title),
+	)
+
+	return txt
+}
+
 func stringifyBlock(block notionapi.Block) string {
 	switch block.GetType() {
 	case "paragraph":
@@ -114,7 +123,7 @@ func stringifyNumberedListItemBlock(block *notionapi.NumberedListItemBlock) stri
 }
 
 func stringifyChildPageBlock(block *notionapi.ChildPageBlock) string {
-	return fmt.Sprintf("( %s Page )[ %s ]\n", block.ChildPage.Title, block.ID.String())
+	return fmt.Sprintf("[ %s Page ](%s)\n", block.ChildPage.Title, block.ID.String())
 }
 
 func stringifyCalloutBlock(block *notionapi.CalloutBlock) string {
@@ -130,5 +139,9 @@ func stringifyTodoBlock(block *notionapi.ToDoBlock) string {
 }
 
 func stringifyBookmarkBlock(block *notionapi.BookmarkBlock) string {
-	return fmt.Sprintf("[ %s Bookmark ](%s)\n", decipherRichText(block.Bookmark.Caption), block.Bookmark.URL)
+	txt := decipherRichText(block.Bookmark.Caption)
+	if txt != "" {
+		txt += " "
+	}
+	return fmt.Sprintf("[ %sBookmark ](%s)\n", txt, block.Bookmark.URL)
 }
