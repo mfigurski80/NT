@@ -53,7 +53,7 @@ func stringifyParagraphBlock(block *notionapi.ParagraphBlock) string {
 	for _, ch := range block.Paragraph.Children {
 		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
 	}
-	return p
+	return strings.TrimSuffix(p, "\t")
 }
 
 func stringifyHeading1Block(block *notionapi.Heading1Block) string {
@@ -80,8 +80,9 @@ func stringifyToggleBlock(block *notionapi.ToggleBlock) string {
 	}
 	for _, ch := range block.Toggle.Children {
 		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
+
 	}
-	return p
+	return strings.TrimSuffix(p, "\t")
 }
 
 func stringifySyncedBlock(block *notionapi.SyncedBlock) string {
@@ -109,7 +110,7 @@ func stringifyNumberedListItemBlock(block *notionapi.NumberedListItemBlock) stri
 }
 
 func stringifyChildPageBlock(block *notionapi.ChildPageBlock) string {
-	return fmt.Sprintf("Page: (%s)[%s]\n", block.ChildPage.Title, block.ID.String())
+	return fmt.Sprintf("( %s Page )[ %s ]\n", block.ChildPage.Title, block.ID.String())
 }
 
 func stringifyCalloutBlock(block *notionapi.CalloutBlock) string {

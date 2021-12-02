@@ -35,8 +35,8 @@ Connecting to notion api...
 	
 	Consensus: collective agreement of majority of scientists in a particular field of study
 	Furthermore, scientists are very poorly connected with the public, who mostly get their understanding from the media or policymakers (think pop sci, etc). Like here: https://imgs.xkcd.com/comics/significant.png
-	Page: (Scientific Method)[8b73a485-1f01-41cb-ba94-c571c091fe29]
-	
+	( Scientific Method Page )[ 8b73a485-1f01-41cb-ba94-c571c091fe29 ]
+
 -----------
 
 [ ⚧️ Biological Sex and Gender Toggle ]
@@ -105,8 +105,8 @@ Connecting to notion api...
 	Pain perception is different. NMDA receptor is needed for morphine, and receptors are different between m/f
 	Sex as a Biological Variable (SABV) in 2014. No standards yet, most studies let participants self-report
 	No gender variable guidelines either btw. Might potentially be important, should report
-	Page: (Biological Sex and Gender)[c51cb0b0-c295-42ec-9c7c-3c8d634caccc]
-	
+	( Biological Sex and Gender Page )[ c51cb0b0-c295-42ec-9c7c-3c8d634caccc ]
+
 -----------
 
 [ 🦖 Evolution Toggle ]
@@ -136,12 +136,12 @@ Connecting to notion api...
 	2021-09-20 →  
 	Eu-melanin — black pepo, provides fitness advantage in high UV by... preserving platelets? And stopping cancer
 		MCR1 gene is held constant, but variation in others
-		Pheo-melanin — white pepo, provides fitness advantage in low UV by helping produce vitamin D, stopping rickets
+	Pheo-melanin — white pepo, provides fitness advantage in low UV by helping produce vitamin D, stopping rickets
 		MCR1 gene has more variation in European and Asian populations because it's less important
-		Skin Pigmentation is poly-genic (controlled by multiple genes)
+	Skin Pigmentation is poly-genic (controlled by multiple genes)
 		MFSD12-A makes eu-melanin (G blocks)
 		
-		
+	
 	[[ ✂️ Evolution doesn't lead to the best solutions ]]
 	
 	
@@ -165,8 +165,8 @@ Connecting to notion api...
 	Impacts small populations more
 	Founder Effect — non-representative subset of individuals separates and migrates to different place
 		Gives evidence for African Origin, since Africa has highest genetic variation and hosts an allele superset
-		Page: (Evolution)[50a82265-35f5-4681-9baf-e2def77695f1]
-	
+	( Evolution Page )[ 50a82265-35f5-4681-9baf-e2def77695f1 ]
+
 -----------
 
 [ 🦠 Cells Toggle ]
@@ -179,10 +179,10 @@ Connecting to notion api...
 		Has 2 membranes, bacteria-like DNA.
 		All of the mitochondria comes from egg, so easier to trace moms
 		Sequencing maternal mitochondria DNA supports African lineage (so does sequencing Y chromosome btw)
-		Chloroplast — produces ATP with sunlight. Probably bacteria too
+	Chloroplast — produces ATP with sunlight. Probably bacteria too
 	Endosymbiosis — separate organism living inside another. Termites have parabasilid bacteria that break down wood
-	Page: (Cells)[e109a50c-686c-41f9-ba36-33347f386471]
-	
+	( Cells Page )[ e109a50c-686c-41f9-ba36-33347f386471 ]
+
 -----------
 
 [ 🐦 Evidence for Evolution Toggle ]
@@ -197,18 +197,18 @@ Connecting to notion api...
 		Defines species
 		Internal — change within species, i.e: doesn't fit, behavioral changes
 		External — change in environment, i.e: hurricane, river, migrations
-		Specie — organisms that can reproduce and produce fertile offspring together
+	Specie — organisms that can reproduce and produce fertile offspring together
 		They arise when they become genetically distinct enough that they can't reproduce with their parent specie
-		2021-10-18 →  
+	2021-10-18 →  
 	Transitional Fossils — shows intermediary steps between two species in time
 	Artificial Selection — natural selection but humans imposing the reproduction preference
 	Vestigial Traits — left-over traits from previously functioning structure of ancestor
 		Human tailbone or wisdom teeth or (maybe?) appendix
-		Homology — molecular or structural similarity between species due to common ancestry
+	Homology — molecular or structural similarity between species due to common ancestry
 		Anatomical — similar anatomical structure but different functions
 		Genetic — mammals share MCR1 gene for pigmentation
 		Developmental — similarities in embryonic form between related species that disappear with development
-		2021-10-20 →  
+	2021-10-20 →  
 	
 	## Evolution Artifacts ##
 	
@@ -216,12 +216,12 @@ Connecting to notion api...
 	Model Organism — used to represent specific parts of human body
 		Required: genome sequences, can edit genome, fast generation time, cost efficient, doesn't use space
 		Frogs, mice, mustard plants, zebrafish, etc...
-		Hox Genes — control expression of hundreds of other developmental genes and determine body plan organization
+	Hox Genes — control expression of hundreds of other developmental genes and determine body plan organization
 		Have rigorous order describing placement on the spine — switching them around results in having body parts misplaced on the body
 		Alternatively, this lets evolution make 'quick' dramatic changes such as adding more legs. Since these genes usually get duplicated, that clone undergoes genetic drift and eventually comes out as a new body plan
-		
-	Page: (Evidence for Evolution)[57a2453b-ad03-467f-8e26-d9e1b8046872]
 	
+	( Evidence for Evolution Page )[ 57a2453b-ad03-467f-8e26-d9e1b8046872 ]
+
 -----------
 
 [ ☦️ Social Evolution Toggle ]
@@ -240,10 +240,10 @@ Connecting to notion api...
 	Clonal Case, where everyone is 100%!g(MISSING)enetically identical
 		Cheaters take advantage of others who don't cheat, must be in a group setting
 		Cost associated. If alone, might fail or not grow as much. Even in mixed population, overall success is likely harmed
-		We can prevent genetic cheating by cooperating only with related individuals
+	We can prevent genetic cheating by cooperating only with related individuals
 		Amoebas do this too — recognize each other using Allorecognition Receptors to ensure they self-sort
 		
-		Fixed Cheater — always cheats in every context, but can survive if left alone
+	Fixed Cheater — always cheats in every context, but can survive if left alone
 	Facultative Coercive Cheater — force other genotypes to increase investment or decrease their own reproduction
 	Facultative Self-Promotion Cheater — normal when alone, but cheats in mixed group setting
 	Obligate Cheating — social parasitism. Literally cannot survive alone
@@ -253,14 +253,14 @@ Connecting to notion api...
 	
 	Mutualism — both species gain: 🔺/🔺
 		Nemo and Sea Anemonies!
-		Predation — predator vs prey: 🔻/🔺
+	Predation — predator vs prey: 🔻/🔺
 		Also Parasitism
 		Cowbirds put their eggs in other birds' nests
-		Commensalism — one benefits and other is neutral
+	Commensalism — one benefits and other is neutral
 	Amensalism — one is neutral but other is hurt
 	Interspecies Competition — since resources are limited, both parties are hurt
-	Page: (Social Evolution)[129f6fae-777d-4b54-a417-37e6c6b69e55]
-	
+	( Social Evolution Page )[ 129f6fae-777d-4b54-a417-37e6c6b69e55 ]
+
 -----------
 
 [ 🚔 Immunity Toggle ]
@@ -279,7 +279,7 @@ Connecting to notion api...
 	
 	Cytokines — chemical signaling molecules that stimulate immune response
 		Might cause increase temperature, release histamine into mucus, increase immune cell production
-		Antigen — stimulates immune response
+	Antigen — stimulates immune response
 	Pattern Recognition Receptors — cellular structures for detecting antigens, but cant differentiate between them
 	Natural Killer T Cells — digest foreigners
 	Macrophage / Neutrofil — encases and digests antigen. Is an:
@@ -288,12 +288,12 @@ Connecting to notion api...
 	Antigen Presenting Cell — advertising it's recent food so other cells know. Activates B Cell. Immature T cells, when exposed, turn into:
 		Mature Helper Cell — stimulates B Cell to produce an antigen
 		Mature Cytotoxic
-		B Cell — makes antibodies specific to an antigen. Requires double activation by ATPC and Mature Helper Cells. Gets saved after infection
+	B Cell — makes antibodies specific to an antigen. Requires double activation by ATPC and Mature Helper Cells. Gets saved after infection
 	Antibody — protein targeting specific other protein
 		Cover virus spikes
 		Blows up infected cells
 		Has familiar interface that marks connected cell for destruction
-		
+	
 	2021-11-10 →  
 	
 	### Viruses ###
@@ -311,19 +311,19 @@ Connecting to notion api...
 	4 nucleotide types: ATCG
 	Codon — 3 nucleotide combo
 		Some codons map to same things
-		We have 21 words → 20 Amino Acids
+	We have 21 words → 20 Amino Acids
 	
 	## Virus Variants ##
 	
 	2021-11-29 →  
 	Zoonotic Reservoirs — animals that hold and support virus populations but don't get sick
 	
-	Page: (Immunity)[c42416bf-bf1a-427a-917e-849ed8cc782a]
-	
+	( Immunity Page )[ c42416bf-bf1a-427a-917e-849ed8cc782a ]
+
 -----------
 
 [ More Genetics Toggle ]
 	
-	
-Page: (Group Lab Presentation)[707eb7d3-ec2f-42ce-8a2c-dda78d6f38de]
+
+( Group Lab Presentation Page )[ 707eb7d3-ec2f-42ce-8a2c-dda78d6f38de ]
 
