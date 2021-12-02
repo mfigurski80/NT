@@ -21,6 +21,23 @@ func main() {
 }
 
 func getPage(client *notionapi.Client, id string) {
+	res, err := client.Block.GetChildren(context.Background(), notionapi.BlockID(id), nil)
+	if err != nil {
+		panic(err)
+	}
+	// fmt.Printf("Result: %-v\n", res.Results)
+	for i, block := range res.Results {
+		fmt.Printf("Block #%-2d: %s\n", i, block.GetType())
+		switch block.GetType() {
+		case "paragraph":
+			fmt.Printf("\t%s", decipherParagraphBlock(
+				block.(*notionapi.ParagraphBlock),
+			))
+		}
+	}
+}
+
+func getPageMeta(client *notionapi.Client, id string) {
 	res, err := client.Page.Get(context.Background(), notionapi.PageID(id))
 	if err != nil {
 		panic(err)
