@@ -46,6 +46,9 @@ func stringifyBlock(block notionapi.Block) string {
 
 func stringifyParagraphBlock(block *notionapi.ParagraphBlock) string {
 	p := decipherRichText(block.Paragraph.Text) + "\n"
+	if block.HasChildren {
+		p += "\t"
+	}
 	// fmt.Printf("\t%-v\n", block.ID)
 	for _, ch := range block.Paragraph.Children {
 		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
@@ -72,6 +75,9 @@ func stringifyDividerBlock(block *notionapi.DividerBlock) string {
 func stringifyToggleBlock(block *notionapi.ToggleBlock) string {
 	p := "[ " + decipherRichText(block.Toggle.Text) + " Toggle ]\n"
 	// p += fmt.Sprintf("\tchildren: %-v\n", block.Toggle.Children)
+	if block.HasChildren {
+		p += "\t"
+	}
 	for _, ch := range block.Toggle.Children {
 		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
 	}

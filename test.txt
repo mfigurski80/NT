@@ -6,7 +6,7 @@ Connecting to notion api...
 -----------
 
 [ 🔬 Scientific Method Toggle ]
-2021-08-30 →  
+	2021-08-30 →  
 	
 	# Scientific Method #
 	
@@ -40,7 +40,7 @@ Connecting to notion api...
 -----------
 
 [ ⚧️ Biological Sex and Gender Toggle ]
-2021-09-01 →  
+	2021-09-01 →  
 	
 	## Biological Sex and Gender ##
 	
@@ -110,7 +110,7 @@ Connecting to notion api...
 -----------
 
 [ 🦖 Evolution Toggle ]
-2021-09-15 →  
+	2021-09-15 →  
 	
 	# Evolution #
 	
@@ -135,11 +135,11 @@ Connecting to notion api...
 	
 	2021-09-20 →  
 	Eu-melanin — black pepo, provides fitness advantage in high UV by... preserving platelets? And stopping cancer
-	MCR1 gene is held constant, but variation in others
+		MCR1 gene is held constant, but variation in others
 		Pheo-melanin — white pepo, provides fitness advantage in low UV by helping produce vitamin D, stopping rickets
-	MCR1 gene has more variation in European and Asian populations because it's less important
+		MCR1 gene has more variation in European and Asian populations because it's less important
 		Skin Pigmentation is poly-genic (controlled by multiple genes)
-	MFSD12-A makes eu-melanin (G blocks)
+		MFSD12-A makes eu-melanin (G blocks)
 		
 		
 	[[ ✂️ Evolution doesn't lead to the best solutions ]]
@@ -164,19 +164,19 @@ Connecting to notion api...
 	Allele frequency change due to chance i.e sampling error — provides no fitness benefit
 	Impacts small populations more
 	Founder Effect — non-representative subset of individuals separates and migrates to different place
-	Gives evidence for African Origin, since Africa has highest genetic variation and hosts an allele superset
+		Gives evidence for African Origin, since Africa has highest genetic variation and hosts an allele superset
 		Page: (Evolution)[50a82265-35f5-4681-9baf-e2def77695f1]
 	
 -----------
 
 [ 🦠 Cells Toggle ]
-
+	
 	# Cells #
 	
 	Organelles — compartments in cell that perform different functions. Bacteria don't have these
 	Bacteria — circular chromosome, doesn't have organelles
 	Mitochondria — produces ATP inside a cell, might be it's own bacteria stuck inside prokaryotes.
-	Has 2 membranes, bacteria-like DNA.
+		Has 2 membranes, bacteria-like DNA.
 		All of the mitochondria comes from egg, so easier to trace moms
 		Sequencing maternal mitochondria DNA supports African lineage (so does sequencing Y chromosome btw)
 		Chloroplast — produces ATP with sunlight. Probably bacteria too
@@ -186,26 +186,26 @@ Connecting to notion api...
 -----------
 
 [ 🐦 Evidence for Evolution Toggle ]
-2021-10-06 →  
+	2021-10-06 →  
 	
 	## Evidence for Evolution ##
 	
 	Evolution — change in allele frequency in a population
 	Splits in Lineage — Organisms from one side of split cannot reproduce (and produce fertile offspring) with other side of the split.
-	Caused by reproductive barrier, i.e: geography
+		Caused by reproductive barrier, i.e: geography
 		Two sides might be genetically different
 		Defines species
 		Internal — change within species, i.e: doesn't fit, behavioral changes
 		External — change in environment, i.e: hurricane, river, migrations
 		Specie — organisms that can reproduce and produce fertile offspring together
-	They arise when they become genetically distinct enough that they can't reproduce with their parent specie
+		They arise when they become genetically distinct enough that they can't reproduce with their parent specie
 		2021-10-18 →  
 	Transitional Fossils — shows intermediary steps between two species in time
 	Artificial Selection — natural selection but humans imposing the reproduction preference
 	Vestigial Traits — left-over traits from previously functioning structure of ancestor
-	Human tailbone or wisdom teeth or (maybe?) appendix
+		Human tailbone or wisdom teeth or (maybe?) appendix
 		Homology — molecular or structural similarity between species due to common ancestry
-	Anatomical — similar anatomical structure but different functions
+		Anatomical — similar anatomical structure but different functions
 		Genetic — mammals share MCR1 gene for pigmentation
 		Developmental — similarities in embryonic form between related species that disappear with development
 		2021-10-20 →  
@@ -214,10 +214,10 @@ Connecting to notion api...
 	
 	Lobe-finned vs Ray-finned — thick supportive bones in fins that let you walk on a surface vs bendy skin flaps
 	Model Organism — used to represent specific parts of human body
-	Required: genome sequences, can edit genome, fast generation time, cost efficient, doesn't use space
+		Required: genome sequences, can edit genome, fast generation time, cost efficient, doesn't use space
 		Frogs, mice, mustard plants, zebrafish, etc...
 		Hox Genes — control expression of hundreds of other developmental genes and determine body plan organization
-	Have rigorous order describing placement on the spine — switching them around results in having body parts misplaced on the body
+		Have rigorous order describing placement on the spine — switching them around results in having body parts misplaced on the body
 		Alternatively, this lets evolution make 'quick' dramatic changes such as adding more legs. Since these genes usually get duplicated, that clone undergoes genetic drift and eventually comes out as a new body plan
 		
 	Page: (Evidence for Evolution)[57a2453b-ad03-467f-8e26-d9e1b8046872]
@@ -225,7 +225,7 @@ Connecting to notion api...
 -----------
 
 [ ☦️ Social Evolution Toggle ]
-2021-10-25 →  
+	2021-10-25 →  
 	
 	# Social Evolution and Religion #
 	
@@ -238,10 +238,10 @@ Connecting to notion api...
 	## Cheating ##
 	
 	Clonal Case, where everyone is 100%!g(MISSING)enetically identical
-	Cheaters take advantage of others who don't cheat, must be in a group setting
+		Cheaters take advantage of others who don't cheat, must be in a group setting
 		Cost associated. If alone, might fail or not grow as much. Even in mixed population, overall success is likely harmed
 		We can prevent genetic cheating by cooperating only with related individuals
-	Amoebas do this too — recognize each other using Allorecognition Receptors to ensure they self-sort
+		Amoebas do this too — recognize each other using Allorecognition Receptors to ensure they self-sort
 		
 		Fixed Cheater — always cheats in every context, but can survive if left alone
 	Facultative Coercive Cheater — force other genotypes to increase investment or decrease their own reproduction
@@ -252,9 +252,9 @@ Connecting to notion api...
 	## Cooperation ##
 	
 	Mutualism — both species gain: 🔺/🔺
-	Nemo and Sea Anemonies!
+		Nemo and Sea Anemonies!
 		Predation — predator vs prey: 🔻/🔺
-	Also Parasitism
+		Also Parasitism
 		Cowbirds put their eggs in other birds' nests
 		Commensalism — one benefits and other is neutral
 	Amensalism — one is neutral but other is hurt
@@ -264,7 +264,7 @@ Connecting to notion api...
 -----------
 
 [ 🚔 Immunity Toggle ]
-
+	
 	# Immunity #
 	
 	2021-11-03 →  
@@ -278,7 +278,7 @@ Connecting to notion api...
 	Phlegm, Mucus, Snot — barrier
 	
 	Cytokines — chemical signaling molecules that stimulate immune response
-	Might cause increase temperature, release histamine into mucus, increase immune cell production
+		Might cause increase temperature, release histamine into mucus, increase immune cell production
 		Antigen — stimulates immune response
 	Pattern Recognition Receptors — cellular structures for detecting antigens, but cant differentiate between them
 	Natural Killer T Cells — digest foreigners
@@ -286,11 +286,11 @@ Connecting to notion api...
 	
 	Adaptive Immune System — exposing actually improves response in the f
 	Antigen Presenting Cell — advertising it's recent food so other cells know. Activates B Cell. Immature T cells, when exposed, turn into:
-	Mature Helper Cell — stimulates B Cell to produce an antigen
+		Mature Helper Cell — stimulates B Cell to produce an antigen
 		Mature Cytotoxic
 		B Cell — makes antibodies specific to an antigen. Requires double activation by ATPC and Mature Helper Cells. Gets saved after infection
 	Antibody — protein targeting specific other protein
-	Cover virus spikes
+		Cover virus spikes
 		Blows up infected cells
 		Has familiar interface that marks connected cell for destruction
 		
@@ -310,7 +310,7 @@ Connecting to notion api...
 	
 	4 nucleotide types: ATCG
 	Codon — 3 nucleotide combo
-	Some codons map to same things
+		Some codons map to same things
 		We have 21 words → 20 Amino Acids
 	
 	## Virus Variants ##
@@ -323,7 +323,7 @@ Connecting to notion api...
 -----------
 
 [ More Genetics Toggle ]
-
+	
 	
 Page: (Group Lab Presentation)[707eb7d3-ec2f-42ce-8a2c-dda78d6f38de]
 
