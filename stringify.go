@@ -45,23 +45,23 @@ func stringifyParagraphBlock(block *notionapi.ParagraphBlock) string {
 }
 
 func stringifyHeading1Block(block *notionapi.Heading1Block) string {
-	return "# " + decipherRichText(block.Heading1.Text) + "\n\n"
+	return "\n# " + decipherRichText(block.Heading1.Text) + "\n\n"
 }
 
 func stringifyHeading2Block(block *notionapi.Heading2Block) string {
-	return "## " + decipherRichText(block.Heading2.Text) + "\n\n"
+	return "\n## " + decipherRichText(block.Heading2.Text) + "\n\n"
 }
 
 func stringifyHeading3Block(block *notionapi.Heading3Block) string {
-	return "### " + decipherRichText(block.Heading3.Text) + "\n\n"
+	return "\n### " + decipherRichText(block.Heading3.Text) + "\n\n"
 }
 
 func stringifyDividerBlock(block *notionapi.DividerBlock) string {
-	return "***\n\n"
+	return "-----------\n"
 }
 
 func stringifyToggleBlock(block *notionapi.ToggleBlock) string {
-	p := "[ " + decipherRichText(block.Toggle.Text) + " Toggle ]\n\n"
+	p := "[ " + decipherRichText(block.Toggle.Text) + " Toggle ]\n"
 	// p += fmt.Sprintf("\tchildren: %-v\n", block.Toggle.Children)
 	for _, ch := range block.Toggle.Children {
 		p += stringifyBlock(ch)
