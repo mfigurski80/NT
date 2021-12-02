@@ -26,7 +26,10 @@ func getPage(client *notionapi.Client, id string) {
 		panic(err)
 	}
 	fmt.Printf("Result: %-v\n", res)
-	fmt.Printf("Page: %-v\n", res)
+	fmt.Printf(
+		"Page: %-v\n",
+		res.Properties["title"].(*notionapi.TitleProperty).Title[0].PlainText,
+	)
 }
 
 func searchForQuery(client *notionapi.Client, q string) {
@@ -36,7 +39,7 @@ func searchForQuery(client *notionapi.Client, q string) {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Results: %-v\n", got)
+	// fmt.Printf("Results: %-v\n", got)
 	for i, res := range got.Results {
 		fmt.Printf("Got #%d: %-v\n", i, res)
 	}
