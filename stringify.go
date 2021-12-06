@@ -21,7 +21,7 @@ func stringifyPageMeta(page *notionapi.Page) string {
 		decipherRichText(page.Properties["title"].(*notionapi.TitleProperty).Title),
 	)
 	underline := strings.Repeat("=", len(txt)-2)
-	txt = "\n" + underline + "\n" + txt + "\n" + underline + "\n\n"
+	txt = underline + "\n" + txt + "\n" + underline + "\n\n"
 
 	return txt
 }
