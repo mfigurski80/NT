@@ -15,6 +15,17 @@ func decipherRichText(text []notionapi.RichText) string {
 	return buf
 }
 
+func addIndentedChildren(hasChildren bool, children []notionapi.Block) string {
+	if !hasChildren {
+		return ""
+	}
+	ret := "\t"
+	for _, ch := range children {
+		ret += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
+	}
+	return strings.TrimSuffix(ret, "\t")
+}
+
 func stringifyPageMeta(page *notionapi.Page) string {
 	txt := decipherRichText(page.Properties["title"].(*notionapi.TitleProperty).Title)
 	underline := strings.Repeat("=", len(txt))
@@ -61,15 +72,7 @@ func stringifyBlock(block notionapi.Block) string {
 }
 
 func stringifyParagraphBlock(block *notionapi.ParagraphBlock) string {
-	p := decipherRichText(block.Paragraph.Text) + "\n"
-	if block.HasChildren {
-		p += "\t"
-	}
-	// fmt.Printf("\t%-v\n", block.ID)
-	for _, ch := range block.Paragraph.Children {
-		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
-	}
-	return strings.TrimSuffix(p, "\t")
+	return decipherRichText(block.Paragraph.Text) + "\n" + addIndentedChildren(block.HasChildren, block.Paragraph.Children)
 }
 
 func stringifyHeading1Block(block *notionapi.Heading1Block) string {
@@ -90,15 +93,8 @@ func stringifyDividerBlock(block *notionapi.DividerBlock) string {
 
 func stringifyToggleBlock(block *notionapi.ToggleBlock) string {
 	p := "[ " + decipherRichText(block.Toggle.Text) + " Toggle ]\n"
-	// p += fmt.Sprintf("\tchildren: %-v\n", block.Toggle.Children)
-	if block.HasChildren {
-		p += "\t"
-	}
-	for _, ch := range block.Toggle.Children {
-		p += strings.ReplaceAll(stringifyBlock(ch), "\n", "\n\t")
-
-	}
-	return strings.TrimSuffix(p, "\t")
+	p += addIndentedChildren(block.HasChildren, block.Toggle.Children)
+	return p
 }
 
 func stringifySyncedBlock(block *notionapi.SyncedBlock) string {
@@ -111,17 +107,13 @@ func stringifySyncedBlock(block *notionapi.SyncedBlock) string {
 
 func stringifyBulletedListItemBlock(block *notionapi.BulletedListItemBlock) string {
 	p := "- " + decipherRichText(block.BulletedListItem.Text) + "\n"
-	for _, ch := range block.BulletedListItem.Children {
-		p += stringifyBlock(ch)
-	}
+	p += addIndentedChildren(block.HasChildren, block.BulletedListItem.Children)
 	return p
 }
 
 func stringifyNumberedListItemBlock(block *notionapi.NumberedListItemBlock) string {
 	p := "- " + decipherRichText(block.NumberedListItem.Text) + "\n"
-	for _, ch := range block.NumberedListItem.Children {
-		p += stringifyBlock(ch)
-	}
+	p += addIndentedChildren(block.HasChildren, block.NumberedListItem.Children)
 	return p
 }
 

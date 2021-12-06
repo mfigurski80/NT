@@ -25,12 +25,12 @@
 	
 	Reporting publishes methods, results, conclusions, and then undergoes peer review: 
 	- Peer review promotes rigor & validity, done by experts in the field before publishing
-	- Look for errors
-	- Accept / revise / reject
-	- Not perfect
+		- Look for errors
+		- Accept / revise / reject
+		- Not perfect
 	- Peer testing happens after publishing
-	- People use your methodology to do experiment again (but better)
-	- Will probably get you, lets be honest
+		- People use your methodology to do experiment again (but better)
+		- Will probably get you, lets be honest
 	- Disclose conflict of interest
 	
 	[[ 🔥 Consensus in a scientific field can take a while ]]
@@ -78,7 +78,7 @@
 	
 	Sex deciding process can fail at many levels:
 	- There are many genes involved in the process, any of which can fail. SRY → SOX9 → DMRT1, and !SRY → FOXL2
-	- Even in adult mice, FOXL2 needs to be present to maintain ovaries from turning into testes, and DMRT1 maintains testes to suppress ovaries
+		- Even in adult mice, FOXL2 needs to be present to maintain ovaries from turning into testes, and DMRT1 maintains testes to suppress ovaries
 	- Mutations can lead to intersex individuals, even if not on sex chromosomes themselves
 	Sex can be fluid, determined in different ways by different species. Plants are often hermaphroditic — make pollen and seeds, make female and male flower
 	Some species can turn on / off genes like DMRT1 and FOXL2 (common to vertebrates) to change genders

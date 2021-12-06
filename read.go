@@ -63,7 +63,6 @@ func getPageMeta(ctx context.Context, client *notionapi.Client, id string) *noti
 func readPage(client *notionapi.Client, id string, readPageTitle bool) {
 	ctx := context.Background()
 	if readPageTitle {
-		fmt.Println("Getting page meta...")
 		met := getPageMeta(ctx, client, id)
 		fmt.Printf(stringifyPageMeta(met))
 	}
