@@ -29,7 +29,7 @@ func addIndentedChildren(hasChildren bool, children []notionapi.Block) string {
 func stringifyPageMeta(page *notionapi.Page) string {
 	txt := decipherRichText(page.Properties["title"].(*notionapi.TitleProperty).Title)
 	underline := strings.Repeat("=", len(txt))
-	if (page.Icon != nil && page.Icon.Emoji != nil) {
+	if page.Icon != nil && page.Icon.Emoji != nil {
 		txt = string(*page.Icon.Emoji) + " " + txt
 		underline += "==="
 	}
@@ -66,6 +66,8 @@ func stringifyBlock(block notionapi.Block) string {
 		return stringifyTodoBlock(block.(*notionapi.ToDoBlock))
 	case "bookmark":
 		return stringifyBookmarkBlock(block.(*notionapi.BookmarkBlock))
+	case "equation":
+		return stringifyEquationBlock(block.(*notionapi.EquationBlock))
 	default:
 		return fmt.Sprintf("//![%s]\n", block.GetType().String())
 	}
@@ -139,4 +141,8 @@ func stringifyBookmarkBlock(block *notionapi.BookmarkBlock) string {
 		txt += " "
 	}
 	return fmt.Sprintf("[ %sBookmark ](%s)\n", txt, block.Bookmark.URL)
+}
+
+func stringifyEquationBlock(block *notionapi.EquationBlock) string {
+	return fmt.Sprintf("[ Equation: %s ]\n", block.Equation.Expression)
 }
