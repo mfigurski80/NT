@@ -59,10 +59,13 @@ func getPageMeta(ctx context.Context, client *notionapi.Client, id string) *noti
 	return res
 }
 
-func readPage(client *notionapi.Client, id string) {
+
+func readPage(client *notionapi.Client, id string, readPageTitle bool) {
 	ctx := context.Background()
-	met := getPageMeta(ctx, client, id)
-	fmt.Printf(stringifyPageMeta(met))
+	if readPageTitle {
+		met := getPageMeta(ctx, client, id)
+		fmt.Printf(stringifyPageMeta(met))
+	}
 	// fmt.Printf("# %s %s\n",
 	// *met.Icon.Emoji,
 	// decipherRichText(met.Properties["title"].(*notionapi.TitleProperty).Title),

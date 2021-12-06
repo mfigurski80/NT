@@ -20,7 +20,8 @@ func stringifyPageMeta(page *notionapi.Page) string {
 		*page.Icon.Emoji,
 		decipherRichText(page.Properties["title"].(*notionapi.TitleProperty).Title),
 	)
-	txt += "\n" + strings.Repeat("=", len(txt)-2) + "\n\n"
+	underline := strings.Repeat("=", len(txt)-2)
+	txt = "\n" + underline + "\n" + txt + "\n" + underline + "\n\n"
 
 	return txt
 }
